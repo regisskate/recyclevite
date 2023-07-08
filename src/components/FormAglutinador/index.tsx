@@ -59,37 +59,39 @@ export function FormAglutinador({ isOpen, onRequestClose }: NewFormModalProps) {
                 type="button"
                 className={category === 'azul' ? 'active' : ''}
                 onClick={() => { setCategory('azul'); }}
-              >
+                >
                 <span>Azul</span>
               </button>
               <button
                 type="button"
                 className={category === 'pvdc' ? 'active' : ''}
                 onClick={() => { setCategory('pvdc'); }}
-              >
+                >
 
                 <span>Pvdc</span>
-              </button> <br></br>
+              </button>
             </section>
-            <span></span>
-            Inicio
-            <input
-              type="time"
-              value={startTime}
-              onChange={event => setStartTime(event.target.value)}
-            /><br></br>
-            fim
-            <input
-              type="time"
-              value={endTime}
-              onChange={event => setEndTime(event.target.value)}
-            />
-            <input
-              type="number"
-              placeholder="Peso"
-              value={amount}
-              onChange={event => setAmount(Number(event.target.value))}
-            />
+            <span>Inicio</span>
+            
+            <div>
+              <input
+                type="time"
+                value={startTime}
+                onChange={event => setStartTime(event.target.value)}
+                />
+              <span>Fim</span>
+              <input
+                type="time"
+                value={endTime}
+                onChange={event => setEndTime(event.target.value)}
+                />
+              <input
+                type="number"
+                placeholder="Peso"
+                value={amount}
+                onChange={event => setAmount(Number(event.target.value))}
+                />
+              </div>
             <button type="submit">Enviar</button>
 
           </form>

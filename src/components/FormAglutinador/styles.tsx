@@ -33,7 +33,10 @@ export const Container = styled.form`
   }
 }
 
-  input {
+div {
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    input {
     width: 100%;
     padding: 0 1.5rem;
     height: 4rem;
@@ -52,6 +55,7 @@ export const Container = styled.form`
     & + input {
       margin-top: 1rem;
     }
+  }
   }
   
   

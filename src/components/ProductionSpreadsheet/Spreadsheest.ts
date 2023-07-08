@@ -3,12 +3,12 @@ import styled from "styled-components";
 export const ResultContainer = styled.form`
   max-width: 1120px;
   margin: 0 auto;
-  padding: 2rem 1rem 2rem;
+  padding: 1rem 1rem 2rem;
   display: flex;
   align-items: center;
   border-spacing: 0 0.5rem;
   background-color: #fff;
-  margin-top: 4rem;
+  margin-top: 1rem;
   border-radius: 0.50rem;
 
 
@@ -19,7 +19,7 @@ export const ResultContainer = styled.form`
     thead {
       color: #000;
       font-weight: 400;
-      padding: 1rem 2rem;
+      padding: 1rem 1rem;
       text-align: left;
       line-height: 1.5rem;
       

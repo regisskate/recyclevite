@@ -2,9 +2,29 @@ import { useState } from 'react';
 import { ButtonAglutinado } from './components/ButtonAglutinador';
 import { Header } from './components/Header';
 import { ProductionSpreadsheet } from './components/ProductionSpreadsheet';
-import Modal from "react-modal";
 import './global.css';
 import { FormAglutinador } from './components/FormAglutinador';
+
+const records = [
+  {
+    id: '1',
+    category: 'cores',
+    // type: 'cores',
+    startTime: new Date('2022-02-02'),
+    endTime: new Date('2022-02-02'),
+    amount: 640,
+    createdAt: new Date('2022-02-02 10:00:55')
+  },
+  {
+    id: '2',
+    category: 'strech',
+    startTime: new Date('2022-02-02'),
+    endTime: new Date('2022-02-02'),
+    amount: 7000,
+    createdAt: new Date('2022-02-02 09:00:55')
+  }
+]
+
 function App() {
 
   const [newProductionRecordOpenModal, setNewProductionRecordOpenModal] = useState(false);
@@ -16,19 +36,27 @@ function App() {
     setNewProductionRecordOpenModal(false)
   }
 
+
+
   return (
     <>
       <Header />
       <div>
-        <ButtonAglutinado onOpenModal={handleOpenNewProductionRecordModal} />
+        <ButtonAglutinado 
+          onOpenModal={handleOpenNewProductionRecordModal} 
+        />
       </div>
 
       <FormAglutinador
         isOpen={newProductionRecordOpenModal}
         onRequestClose={handleCloseNewProductionRecordModal}
       />
+      <main>
+        {records.map(record => {
 
-      <ProductionSpreadsheet />
+          return <ProductionSpreadsheet />
+        })}
+      </main>
     </>
   )
 }
